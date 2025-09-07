@@ -1,10 +1,15 @@
 [project]
 version = "0.1.0"
+name = "HPI_{{ cookiecutter.username }}"
 description = "My HPI modules"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
+
 [[project.authors]]
-name = "\"{{ cookiecutter.username }}\""
+name = '{{ cookiecutter.username }}'
+
+[project.optional-dependencies]
+testing = ["pytest", "mypy", "flake8"]
 
 [build-system]
 requires = ["setuptools"]
@@ -18,8 +23,10 @@ check_untyped_defs = "True"
 namespace_packages = "True"
 
 [tool.pytest.ini_options]
-addopts = ["-rap", "--verbose", "./tests/"]
+addopts = "-rap --verbose ./tests/"
 
 [tool.setuptools.packages.find]
-include = []
+where = ["."]
+include = ["my*"]
 exclude = []
+namespaces = true
