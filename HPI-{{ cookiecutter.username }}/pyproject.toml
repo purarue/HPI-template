@@ -1,0 +1,25 @@
+[project]
+version = "0.1.0"
+description = "My HPI modules"
+readme = "README.md"
+requires-python = ">=3.8"
+[[project.authors]]
+name = "\"{{ cookiecutter.username }}\""
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.mypy]
+pretty = "True"
+show_error_context = "True"
+show_error_codes = "True"
+check_untyped_defs = "True"
+namespace_packages = "True"
+
+[tool.pytest.ini_options]
+addopts = ["-rap", "--verbose", "./tests/"]
+
+[tool.setuptools.packages.find]
+include = []
+exclude = []
