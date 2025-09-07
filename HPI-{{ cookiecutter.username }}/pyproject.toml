@@ -16,11 +16,11 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [tool.mypy]
-pretty = "True"
-show_error_context = "True"
-show_error_codes = "True"
-check_untyped_defs = "True"
-namespace_packages = "True"
+pretty = true
+show_error_context = true
+show_error_codes = true
+check_untyped_defs = true
+namespace_packages = true
 
 [tool.pytest.ini_options]
 addopts = "-rap --verbose ./tests/"
