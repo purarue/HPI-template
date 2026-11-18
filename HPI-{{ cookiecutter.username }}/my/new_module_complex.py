@@ -15,7 +15,7 @@ You may not need all of this for every module; this includes:
 from typing import Sequence, Iterator, NamedTuple
 
 from my.core import dataclass, Paths, Path, get_files, make_logger
-from my.core.common import mcachew
+from my.core.cachew import mcachew
 
 
 # stub example config, can remove this if you add something to 'my.config'
